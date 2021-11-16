@@ -1,0 +1,57 @@
+﻿@page
+
+<div>
+    <h3>Register</h3>
+</div>
+<form method="post" action="teste" style="border:solid 1px">
+    <div>
+        <table>
+            <tr>
+                <td><input placeholder="First Name" type="text" name="txtFirstName" /></td>
+                <td><input placeholder="Last Name" type="text" /></td>
+                <td><input placeholder="Cpf" type="text" /></td>
+                <td>
+                    <select>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Undefined">Undefined</option>
+                    </select>
+                </td>
+                <td><input placeholder="Birthday" type="date" /></td>
+            </tr>
+        </table>
+    </div>
+</form>
+<form method="post" style="border:solid 1px">
+    <div>
+        <table>
+            <tr>
+                <td><input placeholder="Email" type="email" /></td>
+                <td><input placeholder="Login" type="text" /></td>
+                <td><input placeholder="Password" type="password" /></td>
+                <td><input placeholder="Confirm Password" type="password" /></td>
+            </tr>
+        </table>
+    </div>
+</form>
+<form method="post" style="border:solid 1px">
+    <div>
+        <table>
+            <tr>
+                <td><input placeholder="CEP" type="text" /></td>
+                <td><input placeholder="Street" type="text" /></td>
+            </tr>
+        </table>
+    </div>
+</form>
+<form method="post" style="border:solid 1px">
+    <div>
+        <table>
+            <tr>
+                <td><input type="submit" value="Cancel" asp-page-handler="Cancel" /></td>
+                <td><input type="submit" value="Clear All" asp-page-handler="ClearAll" /></td>
+                <td><input type="submit" value="Confirm" asp-page-handler="Confirm" /></td>
+            </tr>
+        </table>
+    </div>
+</form>

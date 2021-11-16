@@ -1,0 +1,34 @@
+﻿@page
+@model LoginTester.Pages.LoginModel
+@{
+}
+
+<form method="post" style="border:solid 2px">
+    <div>
+        <h3>Login</h3>
+    </div>
+    <div>
+        <table>
+            <tr>
+                <td><input type="email" placeholder="Email" /></td>
+                <td><input type="password" placeholder="Password" /></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Login" asp-page-handler="Login" /></td>
+            </tr>
+        </table>
+    </div>
+</form>
+<form method="post" style="border:solid 2px">
+    <div>
+        <h3>Register</h3>
+    </div>
+    <div>
+        <table>
+            <tr>
+                <td><input type="submit" value="Register with Google" asp-page-handler="RegisterGoogle" /></td>
+                <td><input type="submit" value="Register" asp-page-handler="Register" /></td>
+            </tr>
+        </table>
+    </div>
+</form>
