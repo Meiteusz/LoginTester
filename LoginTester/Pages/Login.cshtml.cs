@@ -16,7 +16,7 @@ namespace LoginTester.Pages
 
         public IActionResult OnPostRegister()
         {
-            return Redirect("/Views/Register");
+            return RedirectToPage("/Register");
         }
     }
 }

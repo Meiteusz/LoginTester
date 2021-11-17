@@ -5,11 +5,11 @@ VisualStudioVersion = 17.1.31903.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoginTester", "LoginTester\LoginTester.csproj", "{F7A241BC-A8F1-45DB-B738-AF90F654605A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controllers", "App\Controllers\Controllers.csproj", "{F1FD7D78-D9EA-4832-8E81-15E24A6584DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Controllers", "App\Controllers\Controllers.csproj", "{F1FD7D78-D9EA-4832-8E81-15E24A6584DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "App\Models\Models.csproj", "{B2A17758-0053-45BB-ADDE-9C8E591A0DF7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "App\Models\Models.csproj", "{B2A17758-0053-45BB-ADDE-9C8E591A0DF7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InjectionModules", "App\InjectionModules\InjectionModules.csproj", "{F60D00C7-DCB9-4148-AD4C-4E8C35B318E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InjectionModules", "App\InjectionModules\InjectionModules.csproj", "{F60D00C7-DCB9-4148-AD4C-4E8C35B318E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

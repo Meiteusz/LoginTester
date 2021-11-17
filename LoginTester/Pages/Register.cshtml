@@ -1,15 +1,18 @@
 ﻿@page
+@model LoginTester.Pages.RegisterModel
+@{
+}
 
 <div>
     <h3>Register</h3>
 </div>
-<form method="post" action="teste" style="border:solid 1px">
+<form method="post" style="border:solid 1px">
     <div>
         <table>
             <tr>
-                <td><input placeholder="First Name" type="text" name="txtFirstName" /></td>
-                <td><input placeholder="Last Name" type="text" /></td>
-                <td><input placeholder="Cpf" type="text" /></td>
+                <td><input placeholder="First Name" type="text" asp-for="user.FirstName"/></td>
+                <td><input placeholder="Last Name" type="text" asp-for="user.LastName" /></td>
+                <td><input placeholder="Cpf" type="text" asp-for="user.Cpf" /></td>
                 <td>
                     <select>
                         <option value="Male">Male</option>
@@ -17,7 +20,7 @@
                         <option value="Undefined">Undefined</option>
                     </select>
                 </td>
-                <td><input placeholder="Birthday" type="date" /></td>
+                <td><input placeholder="Birthday" type="date" asp-for="user.Birthday" /></td>
             </tr>
         </table>
     </div>
@@ -26,9 +29,9 @@
     <div>
         <table>
             <tr>
-                <td><input placeholder="Email" type="email" /></td>
-                <td><input placeholder="Login" type="text" /></td>
-                <td><input placeholder="Password" type="password" /></td>
+                <td><input placeholder="Email" type="email" asp-for="user.Email" /></td>
+                <td><input placeholder="Login" type="text" asp-for="user.Login" /></td>
+                <td><input placeholder="Password" type="password" asp-for="user.Password" /></td>
                 <td><input placeholder="Confirm Password" type="password" /></td>
             </tr>
         </table>
@@ -38,8 +41,8 @@
     <div>
         <table>
             <tr>
-                <td><input placeholder="CEP" type="text" /></td>
-                <td><input placeholder="Street" type="text" /></td>
+                <td><input placeholder="CEP" type="text" asp-for="user.Cep" /></td>
+                <td><input placeholder="Street" type="text" asp-for="user.Street" /></td>
             </tr>
         </table>
     </div>
