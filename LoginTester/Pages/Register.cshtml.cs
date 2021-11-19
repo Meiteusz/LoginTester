@@ -9,8 +9,6 @@ namespace LoginTester.Pages
         [BindProperty]
         public User user { get; set; }
 
-        public string testName { get; set; } ="teste";
-
         public void OnGet()
         {
             
