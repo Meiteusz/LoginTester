@@ -9,9 +9,11 @@ namespace LoginTester.Pages
         [BindProperty]
         public User user { get; set; }
 
+        public UserDAL userDAL { get; set; }
+
         public void OnGet()
         {
-            
+
         }
 
         public IActionResult OnPostCancel()
@@ -19,19 +21,14 @@ namespace LoginTester.Pages
             return Redirect("/Login");
         }
 
-        public void OnPostClearAll()
-        {
-
-        }
-
         public IActionResult OnPostConfirm()
         {
-            if (ModelState.IsValid)
-            {
+            var response = userDAL.InsertUser(user);
 
-            }
-
-            return RedirectToPage("/Login");
+            if (response.Success)
+                return RedirectToPage("/Login");
+            else
+                return RedirectToPage("/Register");
         }
     }
 }

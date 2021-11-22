@@ -10,21 +10,22 @@
 
 @using (Html.BeginForm(FormMethod.Post, new { Style = "border:solid 1px" }))
 {
+    <script src="~/js/RegisterScript.js"></script>
     <div>
         <table>
             <tr>
                 <td>@Html.LabelFor(x => x.user.FirstName)</td>
-                <td>@Html.TextBoxFor(x => x.user.FirstName)</td>
+                <td>@Html.TextBoxFor(x => x.user.FirstName, new {id = "txtFirstName"})</td>
             </tr>
             <tr>
             <tr>
                 <td>@Html.LabelFor(x => x.user.LastName)</td>
-                <td>@Html.TextBoxFor(x => x.user.LastName)</td>
+                <td>@Html.TextBoxFor(x => x.user.LastName, new {id = "txtLastName"})</td>
             </tr>
             <tr>
             <tr>
                 <td>@Html.LabelFor(x => x.user.Cpf)</td>
-                <td>@Html.TextBoxFor(x => x.user.Cpf)</td>
+                <td>@Html.TextBoxFor(x => x.user.Cpf, new {id = "txtCpf"})</td>
             </tr>
             <tr>
                 <td>@Html.LabelFor(x => x.user.Gender)</td>
@@ -32,35 +33,35 @@
             </tr>
             <tr>
                 <td>@Html.LabelFor(x => x.user.Birthday)</td>
-                <td>@Html.TextBoxFor(x => x.user.Birthday)</td>
+                <td>@Html.TextBoxFor(x => x.user.Birthday, new {id = "dtpBirthDay"})</td>
             </tr>
             <tr>
                 <td>@Html.LabelFor(x => x.user.Email)</td>
-                <td>@Html.TextBoxFor(x => x.user.Email)</td>
+                <td>@Html.TextBoxFor(x => x.user.Email, new {id = "txtEmail"})</td>
             </tr>
             <tr>
                 <td>@Html.LabelFor(x => x.user.Login)</td>
-                <td>@Html.TextBoxFor(x => x.user.Login)</td>
+                <td>@Html.TextBoxFor(x => x.user.Login, new {id = "txtLogin"})</td>
             </tr>
             <tr>
                 <td>@Html.LabelFor(x => x.user.Password)</td>
-                <td>@Html.TextBoxFor(x => x.user.Password)</td>
+                <td>@Html.TextBoxFor(x => x.user.Password, new {id = "txtPassword"})</td>
             </tr>
             <tr>
                 <td>@Html.Label("Confirm Password")</td>
-                <td>@Html.TextBoxFor(x => x.user.Password)</td>
+                <td>@Html.TextBoxFor(x => x.user.Password, new {id = "txtConfirmPassword"})</td>
             </tr>
             <tr>
                 <td>@Html.LabelFor(x => x.user.Cep)</td>
-                <td>@Html.TextBoxFor(x => x.user.Cep)</td>
+                <td>@Html.TextBoxFor(x => x.user.Cep, new {id = "txtCep"})</td>
             </tr>
             <tr>
                 <td>@Html.LabelFor(x => x.user.Street)</td>
-                <td>@Html.TextBoxFor(x => x.user.Street)</td>
+                <td>@Html.TextBoxFor(x => x.user.Street, new {id = "txtStreet"})</td>
             </tr>
             <tr>
                 <td><input type="submit" value="Cancel" asp-page-handler="Cancel" /></td>
-                <td><input type="submit" value="Clear All" asp-page-handler="ClearAll" /></td>
+                <td><input type="submit" value="Clear All" onclick="javascript:ClearAll();" asp-page-handler="ClearAll" /></td>
                 <td><input type="submit" value="Confirm" asp-page-handler="Confirm" /></td>
             </tr>
         </table>
