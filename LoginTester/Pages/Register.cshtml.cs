@@ -9,7 +9,7 @@ namespace LoginTester.Pages
         [BindProperty]
         public User user { get; set; }
 
-        public UserDAL userDAL { get; set; }
+        public UserDAL userDAL = new UserDAL();
 
         public void OnGet()
         {
