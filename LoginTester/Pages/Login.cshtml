@@ -3,6 +3,32 @@
 @{
 }
 
+@if (TempData["AlertMessage"] != null && TempData["AlertType"] != null) //change!!!!!
+{
+    @if ((WarningType)TempData["AlertType"] == WarningType.Success)
+    {
+        <div class="alert alert-success">
+            <strong>@TempData["AlertMessage"]</strong>
+        </div>
+    }
+    else if((WarningType)TempData["AlertType"] == WarningType.Info){
+        <div class="alert alert-info">
+            <strong>@TempData["AlertMessage"]</strong>
+        </div>
+    }
+    else if((WarningType)TempData["AlertType"] == WarningType.Warning){
+        <div class="alert alert-warning">
+            <strong>@TempData["AlertMessage"]</strong>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-danger">
+            <strong>@TempData["AlertMessage"]</strong>
+        </div>
+    }
+}
+
 <form method="post" style="border:solid 2px">
     <div>
         <h3>Login</h3>

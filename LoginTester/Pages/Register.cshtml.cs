@@ -18,17 +18,22 @@ namespace LoginTester.Pages
 
         public IActionResult OnPostCancel()
         {
-            return Redirect("/Login");
+            return RedirectToPage("/Login");
         }
 
         public IActionResult OnPostConfirm()
         {
             var response = userDAL.InsertUser(user);
+            var successInsert = response.Success;
 
-            if (response.Success)
+            TempData["AlertMessage"] = GlobalHelper.BusinessAlert(response.Message, successInsert ? WarningType.Success : WarningType.Danger);
+            TempData["AlertType"] = successInsert ? WarningType.Success : WarningType.Danger; //change!!!!!!!!!!!!!!!!
+
+            if (successInsert)
                 return RedirectToPage("/Login");
             else
                 return RedirectToPage("/Register");
+
         }
     }
 }
