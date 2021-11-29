@@ -11,12 +11,14 @@
             <strong>@TempData["AlertMessage"]</strong>
         </div>
     }
-    else if((WarningType)TempData["AlertType"] == WarningType.Info){
+    else if ((WarningType)TempData["AlertType"] == WarningType.Info)
+    {
         <div class="alert alert-info">
             <strong>@TempData["AlertMessage"]</strong>
         </div>
     }
-    else if((WarningType)TempData["AlertType"] == WarningType.Warning){
+    else if ((WarningType)TempData["AlertType"] == WarningType.Warning)
+    {
         <div class="alert alert-warning">
             <strong>@TempData["AlertMessage"]</strong>
         </div>
@@ -29,32 +31,41 @@
     }
 }
 
-<form method="post" style="border:solid 2px">
+@using (Html.BeginForm(FormMethod.Post, new { Style = "border:solid 2px" }))
+{
     <div>
-        <h3>Login</h3>
-    </div>
-    <div>
-        <table>
+        <div>
+            <h3>Login</h3>
+        </div>
+        <table style="border:solid 2px">
             <tr>
-                <td><input type="email" placeholder="Email" /></td>
-                <td><input type="password" placeholder="Password" /></td>
+                <td>@Html.LabelFor(x => x.user.Email)</td>
+                <td>@Html.TextBoxFor(x => x.user.Email)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(x => x.user.Password)</td>
+                <td>@Html.TextBoxFor(x => x.user.Password)</td>
             </tr>
             <tr>
                 <td><input type="submit" value="Login" asp-page-handler="Login" /></td>
             </tr>
         </table>
-    </div>
-</form>
-<form method="post" style="border:solid 2px">
-    <div>
-        <h3>Register</h3>
-    </div>
-    <div>
-        <table>
+        <div>
+            <h3>Register</h3>
+        </div>
+        <table style="border:solid 2px">
+            <tr>
+                <td>@Html.LabelFor(x => x.user.Email)</td>
+                <td>@Html.TextBoxFor(x => x.user.Email)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(x => x.user.Password)</td>
+                <td>@Html.TextBoxFor(x => x.user.Password)</td>
+            </tr>
             <tr>
                 <td><input type="submit" value="Register with Google" asp-page-handler="RegisterGoogle" /></td>
                 <td><input type="submit" value="Register" asp-page-handler="Register" /></td>
             </tr>
         </table>
     </div>
-</form>
+}

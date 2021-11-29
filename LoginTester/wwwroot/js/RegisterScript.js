@@ -11,3 +11,7 @@
     document.getElementById("txtCep").value = ''
     document.getElementById("txtStreet").value = ''
 }
+
+function test(){
+    alert('aaa')
+}

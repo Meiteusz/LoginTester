@@ -16,12 +16,14 @@
             <strong>@TempData["AlertMessage"]</strong>
         </div>
     }
-    else if((WarningType)TempData["AlertType"] == WarningType.Info){
+    else if ((WarningType)TempData["AlertType"] == WarningType.Info)
+    {
         <div class="alert alert-info">
             <strong>@TempData["AlertMessage"]</strong>
         </div>
     }
-    else if((WarningType)TempData["AlertType"] == WarningType.Warning){
+    else if ((WarningType)TempData["AlertType"] == WarningType.Warning)
+    {
         <div class="alert alert-warning">
             <strong>@TempData["AlertMessage"]</strong>
         </div>

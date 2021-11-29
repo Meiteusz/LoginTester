@@ -4,7 +4,7 @@
     {
         private static string DefaultSuccessMessage = "";
         private static string DefaultFailedMessage = "";
-        public static Response AddUserSuccess()
+        public static Response AddUserSuccess() //---------------CHANGE THE NAME OF THESE METHODS
             => new Response { Success = true, Message = BusinessConst.DefaultSuccessMessage };
         public static Response AddUserSuccess(string message)
             => new Response { Success = true, Message = message };

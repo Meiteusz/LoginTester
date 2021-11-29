@@ -18,6 +18,7 @@ namespace LoginTester.Pages
 
         public IActionResult OnPostCancel()
         {
+            user = null;
             return RedirectToPage("/Login");
         }
 
