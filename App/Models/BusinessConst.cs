@@ -6,7 +6,7 @@ namespace Models
 {
     public static class BusinessConst
     {
-        public const string DefaultSuccessMessage = "";
-        public const string DefaultFailedMessage = "";
+        public const string DefaultSuccessMessage = "Success to executing the action";
+        public const string DefaultFailedMessage = "Error to executing the action";
     }
 }

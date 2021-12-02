@@ -34,5 +34,10 @@ namespace LoginTester.Pages
         {
             return RedirectToPage("/Register");
         }
+
+        public IActionResult OnPostRegisterGoogle()
+        {
+            return RedirectToPage("");
+        }
     }
 }

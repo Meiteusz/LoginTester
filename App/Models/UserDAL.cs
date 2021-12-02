@@ -10,11 +10,11 @@ namespace Models
             try
             {
                 AddUser(user);
-                return BusinessResponses.AddUserSuccess("User Registerd Succefully");
+                return BusinessResponses.SuccessResponse("User Registerd Succefully");
             }
             catch (Exception ex)
             {
-                return BusinessResponses.AddUserFailed(ex.Message);
+                return BusinessResponses.FailedResponse(ex.Message);
             }
         }
 
@@ -26,17 +26,17 @@ namespace Models
                 {
                     if (context.Users.SingleOrDefault(u => u.Email == user.Email && u.Password == user.Password) != null)
                     {
-                        return BusinessResponses.AddUserSuccess("Login succefully");
+                        return BusinessResponses.SuccessResponse("Login succefully");
                     }
                     else
                     {
-                        return BusinessResponses.AddUserFailed("User not finded");
+                        return BusinessResponses.FailedResponse("User not finded");
                     }
                 }
             }
             catch (Exception ex)
             {
-                return BusinessResponses.AddUserFailed(ex.Message);
+                return BusinessResponses.FailedResponse(ex.Message);
             }
         }
     }
